@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar Galería</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="admin-page">
+  <header>
+    <nav>
+      <a href="/admin">
+        <i class="fas fa-home"></i> Inicio
+      </a>
+      <a href="/admin/services">
+        <i class="fas fa-cogs"></i> Servicios
+      </a>
+      <a href="/admin/galeria">
+        <i class="fas fa-images"></i> Galería
+      </a>
+      <a href="/admin/contact">
+        <i class="fas fa-address-book"></i> Contacto
+      </a>
+      <a href="/logout">
+        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="admin-container-galeris">
+      <!-- Sección para Agregar a la Galería -->
+      <section class="add-gallery">
+        <h1>Agregar a la Galería</h1>
+        <form action="/admin/galeria/add" method="post" class="gallery-form">
+          <div class="form-group">
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="image">URL de la Imagen:</label>
+            <input type="text" id="image" name="image" required>
+          </div>
+
+          <button type="submit" class="submit-btn">Añadir a la Galería</button>
+        </form>
+      </section>
+
+      <!-- Sección para Mostrar y Eliminar de la Galería -->
+      <section class="manage-gallery">
+        <h2>Galería Actual</h2>
+        <ul class="gallery-list-admin">
+          <% galeria.forEach(galeria => { %>
+            <li class="gallery-item-admin">
+              <div class="gallery-details-admin">
+                <strong><%= galeria.title %></strong>
+                <p><%= galeria.description %></p>
+              </div>
+              <form action="/admin/galeria/delete/<%= galeria._id %>" method="post">
+                <button type="submit" class="delete-btn">Eliminar</button>
+              </form>
+            </li>
+          <% }); %>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

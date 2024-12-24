@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/css.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="/img/imagen.png" type="image/png"> 
+</head>
+<body class="galeri-page"> <!-- Clase específica para la página de galería -->
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+        <a href="/">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a href="/services">
+          <i class="fas fa-headset"></i> Servicios
+        </a>
+        <a href="/galeria">
+          <i class="fas fa-images"></i> Galería
+        </a>
+        <a href="/contact">
+          <i class="fas fa-address-book"></i> Contacto
+        </a>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <div class="portada">
+      <section class="portada-content">
+        <h2><span class="brand-name-serv">Nuestra Galeria</span></h2>
+        <p class="contact-descript">Ofrecemos mantenimiento y reparación para celulares, laptops y computadoras.</p>
+        <div class="galeria-container">
+          <% galeria.forEach(galeria => { %>
+            <div class="galeria-item">
+              <img class="galeria-image" src="<%= galeria.image %>" alt="<%= galeria.title %>">
+              <h3 class="galeria-item-title"><%= galeria.title %></h3>
+              <p class="galeria-item-description"><%= galeria.description %></p>
+            </div>
+          <% }); %>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 ServiTec. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

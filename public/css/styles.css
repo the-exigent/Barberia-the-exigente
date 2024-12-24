@@ -1,0 +1,723 @@
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Body for Services Page */
+body.services-page {
+  font-family: Arial, sans-serif;
+  background-image: url('/img/iconoIn.png'); /* Ruta de la imagen de fondo específica para la página de servicios */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+}
+
+body.galeri-page {
+  font-family: Arial, sans-serif;
+  background-image: url('/img/FondRep.png'); /* Ruta de la imagen de fondo específica para la página de servicios */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+}
+.galeria-title {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.galeria-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.galeria-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.galeria-item-title {
+  font-size: 24px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.galeria-item-description {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Body for Contact Page */
+body.contact-page {
+  font-family: Arial, sans-serif;
+  background-image: url('/img/Contact1.png'); /* Ruta de la imagen de fondo específica para la página de contacto */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+}
+.contact-title {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.contacts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contact-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.contact-name {
+  font-size: 22px;
+  color: #333;
+}
+
+.contact-email,
+.contact-phone {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Body for Welcome Page */
+body.welcome-page {
+  font-family: Arial, sans-serif;
+  background-image: url('/img/FonIni.png'); /* Ruta de la imagen de fondo específica para la página de bienvenida */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+}
+.portada-content-indice {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 7px;
+
+  /* Fondo con imagen ajustada al texto */
+  background-image: url('/img/logo6.png');
+  background-size: cover; /* La imagen cubre toda el área */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+  /* Capa semitransparente */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  background-blend-mode: overlay; /* Combina imagen y color */
+}
+/* Header and Navigation */
+header {
+  background-color: #333;
+  padding: 15px 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Responsive Navigation */
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #f39c12;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+nav a i {
+  margin-right: 8px; /* Espaciado entre el ícono y el texto */
+  font-size: 20px;   /* Ajusta el tamaño del ícono */
+}
+
+nav a:hover {
+  color: #f39c12;
+}
+
+/* Main Content Section */
+.portadaServi {
+  padding: 40px 20px;
+}
+
+.portada-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.portada-content h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+.contact-descript {
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+/* Services Container */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.service-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-info {
+  padding: 20px;
+}
+
+.service-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.service-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+/* Main Content Section */
+.portada {
+padding: 40px 20px;
+}
+
+.portada-content-indice {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.portada-content-indice ul li {
+  margin: 5px 0;
+  font-size: 1.1rem;
+} 
+.portada-content-indice h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.portada-content-indice p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.portada-content-indice ul {
+  text-align: left;
+  margin: 0 auto 20px;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+
+.brand-name {
+  color: #ffffff;
+}
+
+.brand-name-serv {
+  color: #ffffff;
+}
+
+.intro-text {
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.services-section {
+  margin-top: 30px;
+}
+
+.services-title {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.services-list {
+  list-style: none;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.services-list li {
+  margin-bottom: 15px;
+}
+
+.services-list i {
+  color: #f39c12;
+  margin-right: 10px;
+}
+
+/* About Section */
+.about-section {
+  margin-top: 30px;
+}
+
+.about-text {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Body for Admin Page */
+body.admin-page {
+  font-family: Arial, sans-serif;
+  background-image: url('/img/fondt.jpg'); /* Ruta de la imagen de fondo específica para el panel de admin */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+  background: rgba(0, 0, 0, 0.5); /* Fondo translúcido oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del contenedor */
+}
+
+
+.admin-content {
+  text-align: center;
+}
+
+.admin-title {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.admin-content p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.admin-dashboard {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  margin-top: 30px;
+}
+
+.admin-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.admin-box h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.admin-box p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.admin-link {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.admin-link:hover {
+  background-color: #e67e22;
+}
+
+.admin-container-servi {
+  max-width: 1200px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 15px;
+}
+/* Sección para Agregar Servicio */
+.add-service, .manage-services {
+  flex: 1;
+  padding: 20px;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-service {
+  margin-right: 10px;
+}
+
+.manage-services {
+  margin-left: 10px;
+}
+
+h1, h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.service-form-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.submit-btn {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Sección para Gestionar y Eliminar Servicios */
+.services-list-admin {
+  list-style: none;
+  padding: 0;
+}
+
+.service-item-admin{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f9f9f9;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.service-details-admin {
+  max-width: 70%;
+}
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Admin Container */
+.admin-container-galeris {
+  max-width: 1200px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 15px;
+}
+
+/* Add Contact Section */
+.add-gallery, .manage-gallery {
+  flex: 1;
+  background: #fff;
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-gallery {
+  margin-right: 10px;
+}
+
+.manage-gallery {
+  margin-left: 10px;
+}
+
+/* Form Styles */
+.gallery-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.submit-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #2ecc71;
+}
+
+/* Manage Gallery Section */
+.gallery-list-admin {
+  list-style: none;
+  padding: 0;
+}
+
+.gallery-item-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+
+.gallery-details-admin {
+  max-width: 70%;
+}
+
+
+/* Admin Container */
+.admin-container-contact {
+  max-width: 1200px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 15px;
+}
+
+/* Add Contact Section */
+.add-contact, .manage-contact {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  min-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-contact {
+  margin-right: 10px;
+}
+
+.manage-contact {
+  margin-left: 10px;
+}
+
+/* Form Styles */
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #2ecc71;
+}
+
+/* Manage Contact Section */
+.contact-list-admin {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+
+.contact-details-admin {
+  max-width: 70%;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(58, 57, 57, 0.8); /* Fondo oscuro con opacidad */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+

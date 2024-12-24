@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebPersonal - Admin Panel</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/css.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="admin-page"> <!-- Clase específica para la página de admin -->
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <a href="/admin">
+        <i class="fas fa-home"></i> Inicio
+      </a>
+      <a href="/admin/services">
+        <i class="fas fa-cogs"></i> Servicios
+      </a>
+      <a href="/admin/galeria">
+        <i class="fas fa-images"></i> Galería
+      </a>
+      <a href="/admin/contact">
+        <i class="fas fa-address-book"></i> Contacto
+      </a>
+      <a href="/logout">
+        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+      </a>
+    </nav>
+  </header>
+  
+
+  <!-- Main Content Section -->
+  <main>
+    <div class="admin-container">
+      <section class="admin-content">
+        <h2 class="admin-title">Panel de Administración</h2>
+        <p >Bienvenido al panel de administración. Aquí puedes gestionar los servicios, la galería y los contactos.</p>
+        <div class="admin-dashboard">
+          <div class="admin-box">
+            <h3>Gestión de Servicios</h3>
+            <p>Administra los servicios ofrecidos.</p>
+            <a href="/admin/services" class="admin-link">Ir a Servicios</a>
+          </div>
+          <div class="admin-box">
+            <h3>Gestión de Galería</h3>
+            <p>Administra las imágenes de la galería.</p>
+            <a href="/admin/galeria" class="admin-link">Ir a Galería</a>
+          </div>
+          <div class="admin-box">
+            <h3>Gestión de Contactos</h3>
+            <p>Administra los datos de los contactos.</p>
+            <a href="/admin/contact" class="admin-link">Ir a Contactos</a>
+          </div>
+          <div class="admin-box">
+            <h3>Ver diseños</h3>
+            <p>Ir a la pagina publica.</p>
+            <a href="/" class="admin-link">Ir a la Web Publica</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

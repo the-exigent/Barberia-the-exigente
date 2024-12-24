@@ -1,0 +1,111 @@
+  /* General */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .portada-content-indice ul {
+    text-align: left;
+    margin: 0 auto 20px;
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+  }
+  .colorcontacto {
+    color: #fff; /* Cambia el color del texto para mayor contraste */
+    text-align: center;
+  }  
+  
+  /* Ajustar el contenido de la portada */
+  .portada-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  
+  /* Estilo para el logo */
+  .logo-img {
+    width: 50px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+    display: inline-block;
+    margin-right: 10px; /* Espacio entre el logo y el título */
+    vertical-align: middle; /* Alinea el logo con el texto */
+  }  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo-img {
+    max-width: 100px; /* Limita el tamaño del logo */
+    height: auto;
+  }
+  
+  /* Navbar en dispositivos pequeños */
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header nav ul li {
+    margin-right: 20px;
+  }
+
+  .header h1 {
+    margin: 0;
+  }
+  
+  /* Navegación */
+  .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav li a:hover {
+    color: #f0db4f; /* Cambia a un color destacado al pasar el mouse */
+  }
+  
+  /* Contenido de la portada */
+  .portada-content {
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .portada-content img {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .portada-content img {
+    width: 100%; /* Hace que la imagen sea responsiva */
+    height: auto;
+  }
+  
+  .portada-content p {
+    font-size: 18px;
+  }
+  
+  .section img {
+    width: 80%;
+    max-width: 600px;
+    margin: 10px 0;
+  }

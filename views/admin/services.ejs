@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar Servicios</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="admin-page">
+  <header>
+    <nav>
+      <a href="/admin">
+        <i class="fas fa-home"></i> Inicio
+      </a>
+      <a href="/admin/services">
+        <i class="fas fa-cogs"></i> Servicios
+      </a>
+      <a href="/admin/galeria">
+        <i class="fas fa-images"></i> Galería
+      </a>
+      <a href="/admin/contact">
+        <i class="fas fa-address-book"></i> Contacto
+      </a>
+      <a href="/logout">
+        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="admin-container-servi">
+      <!-- Sección para Agregar Servicio -->
+      <section class="add-service">
+        <h1>Agregar Nuevo Servicio</h1>
+        <form action="/admin/services/add" method="post" class="service-form-admin">
+          <div class="form-group">
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="price">Precio:</label>
+            <input type="number" id="price" name="price" required>
+          </div>
+
+          <div class="form-group">
+            <label for="image">URL de la Imagen:</label>
+            <input type="text" id="image" name="image" required>
+          </div>
+
+          <button type="submit" class="submit-btn">Añadir Servicio</button>
+        </form>
+      </section>
+
+      <!-- Sección para Mostrar y Eliminar Servicios -->
+      <section class="manage-services">
+        <h2>Servicios Actuales</h2>
+        <ul class="services-list-admin">
+          <% services.forEach(service => { %>
+            <li class="service-item-admin">
+              <div class="service-details-admin">
+              <strong><%= service.title %></strong> - $<%= service.price %>
+              <p><%= service.description %></p>
+              </div>
+              <form action="/admin/services/delete/<%= service._id %>" method="post" style="display: inline;">
+                <button type="submit" class="delete-btn">Eliminar</button>
+              </form>
+            </li>
+          <% }); %>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
