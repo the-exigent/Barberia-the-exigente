@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios - WebPersonal</title>
+  <title>Contacto | Barbería The Exigente</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/css.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -17,7 +17,7 @@
           <i class="fas fa-home"></i> Inicio
         </a>
         <a href="/services">
-          <i class="fas fa-headset"></i> Servicios
+          <i class="fas fa-cut"></i> Servicios
         </a>
         <a href="/galeria">
           <i class="fas fa-images"></i> Galería
@@ -33,12 +33,16 @@
     <div class="portada">
       <section class="portada-content">
         <h2><span class="brand-name-serv">Contacto</span></h2>
-        <p class="contact-descript">Ofrecemos mantenimiento y reparación para celulares, laptops y computadoras.</p>
+        <p class="contact-descript">
+          En Barbería The Exigente, tu satisfacción es nuestra prioridad. Estamos aquí para responder a tus preguntas, 
+          escuchar tus sugerencias y atender tus necesidades. Contáctanos para programar tu próxima cita, obtener información 
+          sobre nuestros servicios o cualquier otra consulta. ¡Será un placer ayudarte!
+        </p>
         <div class="contacts-container">
           <% contact.forEach(contact => { %>
             <div class="contact-item">
               <h3 class="contact-name">Nombre: <%= contact.name %></h3>
-              <p class="contact-email">Email: <%= contact.email %></p>
+              <p class="contact-email">Email: <%= contact.email %></p> 
               <p class="contact-phone">Teléfono: <%= contact.telefono %></p>
             </div>
           <% }); %>
@@ -48,7 +52,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2024 WebPersonal. Todos los derechos reservados.</p>
+    <p>&copy; 2024 Barbería The Exigente. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
