@@ -35,7 +35,7 @@
       <!-- Sección para Agregar Servicio -->
       <section class="add-service">
         <h1>Agregar Nuevo Servicio</h1>
-        <form action="/admin/services/add" method="post" class="service-form-admin">
+        <form action="/admin/services/add" method="post" enctype="multipart/form-data" class="service-form-admin">
           <div class="form-group">
             <label for="title">Título:</label>
             <input type="text" id="title" name="title" required>
@@ -52,8 +52,8 @@
           </div>
 
           <div class="form-group">
-            <label for="image">URL de la Imagen:</label>
-            <input type="text" id="image" name="image" required>
+            <label for="image">Imagen:</label>
+            <input type="file" id="image" name="image" accept="image/*">
           </div>
 
           <button type="submit" class="submit-btn">Añadir Servicio</button>

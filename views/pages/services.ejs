@@ -39,7 +39,9 @@
         <div class="services-container">
           <% services.forEach(service => { %>
             <div class="service-item">
-              <img class="service-image" src="<%= service.image %>" alt="<%= service.title %>">
+              <% if (service.image) { %>
+                <img class="service-image" src="<%= service.image %>" alt="<%= service.title %>" style="width: 200px;">
+              <% } %>
               <div class="service-info">
                 <h5 class="service-title"><%= service.title %></h5>
                 <p class="service-description"><%= service.description %></p>

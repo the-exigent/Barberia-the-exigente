@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const mongoose = require('mongoose');
+const multer = require('multer');
 const path = require('path');
 require('dotenv').config();
 
@@ -54,6 +55,30 @@ app.use('/admin', authMiddleware.isAuthenticated, require('./routes/admin'));
 app.use((req, res) => {
   res.status(404).render('404', { title: 'Página no encontrada' });
 });
+
+// Configurar almacenamiento para Multer
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, path.join(__dirname, 'public/uploads')); // Carpeta donde se guardarán las imágenes
+  },
+  filename: (req, file, cb) => {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, uniqueSuffix + path.extname(file.originalname)); // Nombre único para el archivo
+  },
+});
+
+// Filtro para permitir solo imágenes
+const fileFilter = (req, file, cb) => {
+  const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/gif'];
+  if (allowedMimeTypes.includes(file.mimetype)) {
+    cb(null, true);
+  } else {
+    cb(new Error('Tipo de archivo no permitido. Solo se permiten imágenes.'));
+  }
+};
+
+// Middleware de Multer
+const upload = multer({ storage, fileFilter });
 
 // Iniciar servidor
 const PORT = process.env.PORT || '3000';

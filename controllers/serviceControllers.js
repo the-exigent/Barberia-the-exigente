@@ -12,15 +12,24 @@ exports.getServices = async (req, res) => {
 };
 
 // Añadir un nuevo servicio
+// Controlador para agregar un servicio
 exports.addService = async (req, res) => {
   try {
-    const { title, description, price, image } = req.body;
-    const newService = new Service({ title, description, price, image });
+    const { title, description, price } = req.body;
+    const image = req.file ? `/uploads/${req.file.filename}` : null; // Ruta de la imagen
+
+    const newService = new Service({
+      title,
+      description,
+      price,
+      image,
+    });
+
     await newService.save();
     res.redirect('/admin/services');
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error al agregar el servicio');
+    res.status(500).send('Error al agregar el servicio.');
   }
 };
 
